@@ -16,8 +16,7 @@ input_name = input("Введите имя автора или id").lower()
 for author in session.query(Publisher).filter(Publisher.name == input_name or Publisher.id == input_name).all():
     print(author)
 
-<<<<<<< HEAD
-for c in session.query(Shop).filter(Publisher.name == input_name or Publisher.id == input_name).all():
+for c in session.query(Shop).join(filter(Publisher.name == input_name or Publisher.id == input_name).all():
     print(Shop)
 
     # Надеюсь, я правильно поняла, что имелось ввиду под целевым издателем
